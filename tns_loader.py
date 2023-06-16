@@ -63,8 +63,6 @@ def tns_history_upload(tns_history):
                             obj.tns_name = tns_name
                             session.commit()
                             objs_updated += 1
-                            print(f"Updated {obj.id} with TNS name {obj.tns_name}")
-                            print(f"ra: {obj.ra}, dec: {obj.dec}, tns_ra: {tns_ra}, tns_dec: {tns_dec}, tns_ra_str: {tns_obj['ra']}, tns_dec_str: {tns_obj['dec']}")
                 except Exception as e:
                     print(f"Error adding TNS name to object: {str(e)}")
                     session.rollback()
